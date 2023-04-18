@@ -2,40 +2,39 @@
 #define RESOURCEIDENTIFIERS_HPP
 
 import Headers;
-//#include "Headers.h"
 
 namespace Textures
 {
-	enum ID
-	{
-		WorldBackground,
-		WorldTiles,
-		PlayerDefault,
-		Bush1,
-		Bush2,
-		Crate,
-		Mushroom,
-		Sign,
-		Stone,
-		Tree1,
-		Tree2,
-		TitleScreenBackground,
-		ButtonNormal,
-		ButtonSelected,
-		ButtonPressed,
-		TextureCount
-	};
+    enum ID
+    {
+        WorldBackground,
+        WorldTiles,
+        PlayerDefault,
+        Bush1,
+        Bush2,
+        Crate,
+        Mushroom,
+        Sign,
+        Stone,
+        Tree1,
+        Tree2,
+        TitleScreenBackground,
+        ButtonNormal,
+        ButtonSelected,
+        ButtonPressed,
+        TextureCount
+    };
 }
 
 namespace Fonts
 {
-	enum ID
-	{
-		MenuFont,
-		TitleFont,
-		Score,
-		FontCount
-	};
+    enum ID
+    {
+        MenuFont,
+        TitleFont,
+        Score,
+        FontCount
+    };
 }
 
 template <typename Resource, typename Identifier>

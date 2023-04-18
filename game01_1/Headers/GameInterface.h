@@ -2,7 +2,6 @@
 #define GAMEINTERFACE_H
 
 import Headers;
-//#include "Headers.h"
 #include "StateMan.h"
 
 extern std::string playername;
@@ -12,26 +11,26 @@ constexpr auto WINDOW_HEIGHT = 1024;
 
 struct Context
 {
-	std::unique_ptr<Engine::StateMan> m_states;
-	std::unique_ptr<sf::RenderWindow> m_window;
+    std::unique_ptr<Engine::StateMan> m_states;
+    std::unique_ptr<sf::RenderWindow> m_window;
 
-	Context()
-	{
-		m_states = std::make_unique<Engine::StateMan>();
-		m_window = std::make_unique<sf::RenderWindow>();
-	}
+    Context()
+    {
+        m_states = std::make_unique<Engine::StateMan>();
+        m_window = std::make_unique<sf::RenderWindow>();
+    }
 };
 
 class GameInterface
 {
-	std::shared_ptr<Context> context;
-	static const sf::Time time_per_frame;
+    std::shared_ptr<Context> context;
+    static const sf::Time time_per_frame;
 
 public:
-	GameInterface();
-	~GameInterface();
+    GameInterface();
+    ~GameInterface();
 
-	void Run();
+    void Run();
 };
 
 #endif //!GAMEINTERFACE_H

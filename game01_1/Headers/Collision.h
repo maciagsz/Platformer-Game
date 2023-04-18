@@ -12,25 +12,25 @@ class Player;
 
 class Collision
 {
-	sf::Vector2f tile_size;
-	sf::FloatRect rect_vector[9];
-	sf::FloatRect next_pos;
-	Player& _player;
-	World& _world;
-	WorldObject& _worldobject;
+    sf::Vector2f tile_size;
+    sf::FloatRect rect_vector[9];
+    sf::FloatRect next_pos;
+    Player& _player;
+    World& _world;
+    WorldObject& _worldobject;
 
 public:
 
-	Collision(Player&, World&, WorldObject&);
-	~Collision();
+    Collision(Player&, World&, WorldObject&);
+    ~Collision();
 
-	void calculateTiles();
-	void xCollisionCheck(sf::FloatRect&, sf::FloatRect&);
-	void yCollisionCheck(sf::FloatRect&, sf::FloatRect&);
-	void checkScreenCollision();
-	void checkTileCollision();
-	void checkObjectCollision();
-	void checkCollision();
+    void calculateTiles();
+    void xCollisionCheck(sf::FloatRect&, sf::FloatRect&);
+    void yCollisionCheck(sf::FloatRect&, sf::FloatRect&);
+    void checkScreenCollision();
+    void checkTileCollision();
+    void checkObjectCollision();
+    void checkCollision();
 };
 
 #endif //!COLLISION_H

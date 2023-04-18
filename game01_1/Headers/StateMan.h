@@ -2,29 +2,28 @@
 #define STATEMAN_H
 
 import Headers;
-//#include "Headers.h"
 #include "State.h"
 
 namespace Engine
 {
-	class StateMan
-	{
-		std::stack<std::unique_ptr<State>> state_stack;
-		std::unique_ptr<State> new_state_uptr;
+    class StateMan
+    {
+        std::stack<std::unique_ptr<State>> state_stack;
+        std::unique_ptr<State> new_state_uptr;
 
-		bool is_to_be_added;
-		bool is_to_be_replaced;
-		bool is_to_be_removed;
+        bool is_to_be_added;
+        bool is_to_be_replaced;
+        bool is_to_be_removed;
 
-	public:
-		StateMan();
-		~StateMan();
+    public:
+        StateMan();
+        ~StateMan();
 
-		void Add(std::unique_ptr<State>, bool replace = false);
-		void PopCurrent();
-		void ProcessStateChange();
-		std::unique_ptr<State>& GetCurrent();
-	};
+        void Add(std::unique_ptr<State>, bool replace = false);
+        void PopCurrent();
+        void ProcessStateChange();
+        std::unique_ptr<State>& GetCurrent();
+    };
 }
 
 #endif //!STATEMAN_H

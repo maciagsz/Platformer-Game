@@ -3,9 +3,9 @@
 
 namespace variables
 {
-	extern void setPlayerName(std::string);
-	extern std::string* getPlayerName();
+    extern void setPlayerName(std::string);
+    extern std::string* getPlayerName();
 
-	extern void setPlayerScore(std::string);
-	extern std::string* getPlayerScore();
+    extern void setPlayerScore(std::string);
+    extern std::string* getPlayerScore();
 }
